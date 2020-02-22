@@ -19,9 +19,9 @@ public class TransactionDaoImpl implements TransactionDao {
 	}
 
 	public void addSomeAccountDetails() {
-		TransactionUsingSlip ta1 = new TransactionUsingSlip("Nachiketh", "2020SBI01", 8500,
+		TransactionUsingSlip ta1 = new TransactionUsingSlip("Nachiketh", "SBI20205001", 8500,
 				Arrays.asList(new Transaction("1000000001L", LocalDate.now())));
-		TransactionUsingSlip ta2 = new TransactionUsingSlip("Mahesh", "2020SBI02", 9200,
+		TransactionUsingSlip ta2 = new TransactionUsingSlip("Mahesh", "SBI20205002", 9200,
 				Arrays.asList(new Transaction("1000000002L", LocalDate.now())));
 		transaction.put(ta1.getAccountNumber(), ta1);
 		transaction.put(ta2.getAccountNumber(), ta2);
@@ -42,7 +42,7 @@ public class TransactionDaoImpl implements TransactionDao {
 		try {
 			if (amount <= 100 || amount >= 100000) {
 				throw new Exception("Insufficient");
-			} else if ((accountNumber).length() != 9) {
+			} else if ((accountNumber).length() != 12) {
 				throw new Exception("Invalid account number");
 			}
 
@@ -60,7 +60,7 @@ public class TransactionDaoImpl implements TransactionDao {
 		try {
 			if (amount <= 100 || amount >= 100000) {
 				throw new Exception("Insufficient");
-			} else if ((accountNumber).length() != 9) {
+			} else if ((accountNumber).length() != 12) {
 				throw new Exception("Invalid account number");
 			}
 
