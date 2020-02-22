@@ -49,8 +49,8 @@ public class TransactionDaoImpl implements TransactionDao {
 			addAmount(accountNumber, amount);
 			System.out.println("Deposited " + amount + "rs Successfully ");
 			System.out.println("Total Balance:" + getBalanceById(accountNumber));
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+		} catch (Exception exp) {
+			System.out.println(exp.getMessage());
 		}
 		return false;
 	}
