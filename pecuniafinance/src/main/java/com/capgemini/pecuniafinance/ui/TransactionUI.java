@@ -38,7 +38,7 @@ public class TransactionUI {
 		System.out.println("enter account number");
 		String accountNumber=in.next();
 		System.out.println("enter amount to be credited");
-		double amount=2000.0;//in.nextInt();
+		double amount=in.nextInt();
 		//double balance = 0;
 		if(transactionservice.creditUsingSlip( userName, accountNumber,amount)) {
 			System.out.println("amount deposited successfully");

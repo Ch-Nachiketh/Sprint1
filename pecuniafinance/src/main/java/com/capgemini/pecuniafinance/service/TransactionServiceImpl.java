@@ -17,16 +17,3 @@ public class TransactionServiceImpl implements TransactionService {
 	}
 
 }
-
-class amountLessException extends Exception {
-	amountLessException(String msg) {
-		super(msg);
-	}
-}
-
-class AccountException extends Exception {
-	AccountException(String msg) {
-		super(msg);
-	}
-
-}
